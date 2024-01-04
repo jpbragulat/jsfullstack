@@ -7,11 +7,11 @@ $( document ).ready(function() {
         $("#listini").empty()
         $("#deluserlist").empty()
         $("#divUserUpdateList").empty()
-        $.get("https://localhost:7233/api/GetAllUsers", function( data ){
+        $.get("https://localhost:44340/api/v1/notes/getNotes", function( data ){
             let z = 0;
             //ListaGet
             for (z = 0; z < data.length; z++){
-                $("#listini").append('<li> Id: ' + data[z]["id"] + '</li>' + '<li> UserName: ' + data[z]["userName"] + '</li>' + '<li> FirstName: ' + data[z]["firstName"] + '</li>'); //en otro div pero en forma de list
+                $("#listini").append('<li> Id: ' + data[z]["id"] + '</li>' + '<li> Note Title: ' + data[z]["title"] + '</li>' + '<li> Archived: ' + data[z]["archived"] + '</li>' + '<li> CategoryId: ' + data[z]["categoryId"] + '</li>' ); //en otro div pero en forma de list
             };
             //ListaDel
             z = 0;
