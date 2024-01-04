@@ -1,0 +1,20 @@
+h1 {color: aquamarine;}
+h2 {color: blueviolet;}
+h3 {color: coral}
+
+body {background-color: black;}
+#listini {
+    color: white;
+}
+
+#deluserlist{
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+#divUserUpdateList {
+    color: yellow;
+}

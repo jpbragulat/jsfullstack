@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NegroGulio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/main.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="titulo" class="col-12 col-lg-5">
+          <h2><b>PANEL DE VISUALIZACIÓN</b></h2>
+
+          <div id="listaDeUsuarios" class="hidden">
+            <h2>Lista de usuarios</h2>
+            <div id="listini"></div>
+          </div>
+
+          <div id="listaUsuariosABorrar" class="hidden">
+            <h2>Lista de usuarios a borrar</h2>
+            <div id="deluserlist"></div>
+          </div>
+
+          <div id="divUserUpdateList" class="hidden"></div>
+
+          <div id="postuserform" class='hidden'>
+            <h2>Complete form for new user</h2>
+            <form id="AddUserForm">
+              <div id="id-group" class="form-group">
+                <label for="id">User ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userId"
+                  name="userId"
+                  placeholder="User ID"
+                />
+              </div>
+              <div id="postrUserName-group" class="form-group">
+                <label for="postUserName">Post UserName</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postUserName"
+                  name="postUserName"
+                  placeholder="Post User Name"
+                />
+              </div>
+              <div id="postFirstName-group" class="form-group">
+                <label for="postFirstName-group">Post First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postFirstName"
+                  name="postFirstName"
+                  placeholder="Post First Name"
+                />
+              </div>
+              <div id="postLastName-group" class="form-group">
+                <label for="postLastName">Post Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postLastName"
+                  name="postLastName"
+                  placeholder="Post Last Name"
+                />
+              </div>
+              <div id="postCountry-group" class="form-group">
+                <label for="country">Post Country</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postCountry"
+                  name="postCountry"
+                  placeholder="Post Country"
+                />
+              </div>
+              <div id="postState-group" class="form-group">
+                <label for="country">Post State</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postState"
+                  name="postState"
+                  placeholder="Post State"
+                />
+              </div>
+              <div id="postCity-group" class="form-group">
+                <label for="postCity">Post City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postCity"
+                  name="postCity"
+                  placeholder="Post City"
+                />
+              </div>
+              <button id="buttonSubmitPost" type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+
+        </div>
+
+        <div id="titulo2" class="col-12 col-lg-5">
+          <h2><b>FORMULARIO </b></h2>
+          <form id="formUpdate" class="hidden">
+            <div id="id-group" class="form-group">
+              <label for="id"> Update User ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateUserId"
+                name="updateUserId"
+                placeholder="User ID"
+              />
+            </div>
+            <div id="updateUserName-group" class="form-group">
+              <label for="updateUserName">Post UserName</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateUserName"
+                name="updateUserName"
+                placeholder="Update User Name"
+              />
+            </div>
+            <div id="updateFirstName-group" class="form-group">
+              <label for="updateFirstName-group">Post First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateFirstName"
+                name="updateFirstName"
+                placeholder="Update First Name"
+              />
+            </div>
+            <div id="updateLastName-group" class="form-group">
+              <label for="updateLastName">Post Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateLastName"
+                name="updateLastName"
+                placeholder="update Last Name"
+              />
+            </div>
+            <div id="updateCountry-group" class="form-group">
+              <label for="updatecountry">Post Country</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateCountry"
+                name="updateCountry"
+                placeholder="Post Country"
+              />
+            </div>
+            <div id="postState-group" class="form-group">
+              <label for="updateState">Post State</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateState"
+                name="updateState"
+                placeholder="Update State"
+              />
+            </div>
+            <div id="updateCity-group" class="form-group">
+              <label for="updateCity">Post City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="updateCity"
+                name="updateCity"
+                placeholder="Update City"
+              />
+            </div>
+            <button id="buttonSubmitUpdate" type="submit" class="btn btn-success">Submit Update</button>
+          </form>
+        </div>
+
+        <div id="datosapi" class="col-12 col-lg-2">
+          <h2><b>COMANDOS</b></h2>
+          <h3>USERS</h3>
+          <h2 class="btn btn-primary" id="btnallusers">HTTP_GET_ALLUSERS</h2>
+          <h3>CREATE USER</h3>
+          <h2 class="btn btn-primary" id="btnpostuser">HTTP_POST_USER</h2>
+          <h3>DELETE USER</h3>
+          <h2 class="btn btn-primary" id="btndeluser">HTTP_DEL_USER</h2>
+          <h3>UPDATE USER</h3>
+          <h2 class="btn btn-primary" id="btnUpdateUser">HTTP_UPDATE_USER</h2>
+            <!-- Boton para form con toogle y dps viene todo el form con bootstrap-->
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/JS/main.js"></script>
+
+  </body>
+
+</html>
