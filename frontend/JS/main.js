@@ -4,6 +4,7 @@ $( document ).ready(function() {
     console.log( "ready!" );
 
     function ListarAllUsers() {
+        console.log("ListarAllUsers() have been called");
         $("#listini").empty()
         $("#deluserlist").empty()
         $("#divUserUpdateList").empty()
